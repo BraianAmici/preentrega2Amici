@@ -1,0 +1,339 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*propiedad background paso a paso*/
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: rgb(207, 199, 172);
+    background-image: url(../iimagenes/fondo2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+
+/*propiedad background simplificado
+
+    background: rgb(207, 199, 172) url(../iimagenes/fondo2.jpg) no-repeat center fixed;
+*/
+
+}
+
+
+/*FLEXBOX*/
+h1{
+    padding: 20px;
+    color: azure;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+.imgmueble{
+    width: 200px;
+}
+div{
+    margin: 5px;
+   
+}
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+/*se puede trabajar sobre la class de elemento principal*/
+
+.padre{
+    background-color: rgb(248, 225, 160);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: none;
+}
+.padre article .mueble{
+    margin-bottom: 20px;
+}
+.padre article. .mueble img{
+    vertical-align: top;
+    width: 100%;
+}
+ 
+/*el display flex me permite dar indicaciones a los "hijos"*/   
+
+
+.fotomueble{
+  margin: 0.4rem;
+}
+div:hover{
+    border: solid white 3px;
+}
+.imgmueble:hover{
+    opacity: .4;
+}
+
+/*tipo de navegacion*/
+
+.menu {
+    list-style-type: content;
+    display: flex;
+    padding: 0.7rem;
+  } 
+
+/*barra de navegacion*/
+
+.nav{
+    width: 98%;
+    margin: 0 auto;
+    background-color: rgb(218, 196, 124);
+    
+    border: solid black 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-color: rgb(8, 8, 8);
+}
+
+/*uso de grid*/
+
+.contenedor {  
+    display: grid;
+    grid-template-columns: 1fr 0.8fr 1fr;
+    grid-template-rows: 0.8fr 1fr 1.9fr 0.3fr;
+    gap: 3px 3px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "main main aside1"
+      "main main aside2"
+      "footer footer footer";
+  }
+  
+  /*formato barra navegacion*/
+  
+  .header{
+  grid-area: header;
+  width: 100%;
+  padding:1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+
+  .aside1{
+    border-radius: 10px;
+    border: solid black 4px;
+    
+  }
+  /*fondo de pagina 2 h2 primera franja*/
+  .qnsp{
+    background-color: aquamarine;
+  }
+  .aside2{
+    border-radius: 10px;
+    border: solid black 4px;
+  }
+  /*fondo de pagina 2 h2 segunda franja*/
+  .qns{
+    background-color: beige;
+  }
+
+/*cuerpo de formulario*/
+
+.formulario{
+    width: 600px;
+    margin: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    border: solid rgb(10, 10, 10) 2px;
+}
+/*pie de pagina*/
+
+.footer{
+    margin: 20px;
+}
+  
+  .header { grid-area: header; }
+  
+  .padre { grid-area: main; }
+  
+  .aside1 { grid-area: aside1; }
+  
+  .aside2 { grid-area: aside2; }
+  
+  .footer { grid-area: footer; }
+
+  /*aptitud pc*/
+  @media screen and (max-width:1024px){
+
+  .contenedor{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr 1.9fr 0.3f;
+    gap: 3px 3px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header"
+      "main main aside1"
+      "main main aside2"
+      "footer footer footer";
+    
+  }
+  }
+  /*aptitud tablet*/
+
+  @media screen and (max-width:768px){
+
+
+    .contenedor{
+      display: grid;
+    grid-template-columns: 1fr  1fr;
+      grid-template-rows:  0.8fr 1fr 1.9fr 0.3f;
+      gap: 3px 3px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "header header "
+        "main aside1"
+        "main aside2"
+        "footer footer";
+      
+    }
+    }
+
+    /*aptitud smartphone*/
+
+    @media screen and (max-width:526px){
+
+
+        .contenedor{
+          display: grid;
+        grid-template-columns: 1fr ;
+          grid-template-rows:  0.8fr 1fr 1.9fr 1.9fr 0.3f;
+          gap: 3px 3px;
+          grid-auto-flow: row;
+          grid-template-areas:
+            "header"
+            "main"
+            "aside1"
+            "aside2"
+            "footer";
+          
+        }
+        }  
+/*imagen de barra navegacion*/
+
+.fotlogo img{
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/*formato para el menu de navegacion*/
+
+.menu{     /*responde a la UL*/
+    display: flex;
+    padding: 0.5rem;
+}
+.link{    /*cambios en los links del menu*/
+    color: black;
+    text-decoration: none;
+    padding: 0.7rem;
+}
+.link:hover{ /*modifica los colores cuando el cursor pasa por encima*/
+    background-color: brown;
+    color: beige;
+    border-radius: 12px;
+}
+
+/*titulo*/
+
+.charo{
+    text-align: center;
+    color: rgb(207, 89, 6); 
+    
+}
+.subt{
+    text-align: center;
+    color: rgb(49, 180, 62);
+    
+}
+
+/*estilo casilla de mensajes*/
+
+.consultaweb{
+    display: block;
+    text-align: center;
+}
+
+/*foto encabezado. pag formulario. cuadro diderencial */
+
+.fotoconsulta{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+/*espacio de texto quienessomos.*/
+
+.parrafouno{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    line-height: 2;
+}
+.parrafodos{
+    line-height: 1;
+}
+
+/*color de texto parrafo central lista.*/
+
+.desarolo{
+    background-color: black;
+    color: rgb(211, 130, 24);
+}
+.desarollo{
+    background-color: white;
+    color: rgb(36, 53, 213);
+}
+
+/*estilo barra nav*/
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*estilo link nav*/
+li{
+    display:inline-block
+}
+
+/*inicio de tablero */
+
+table{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+/*cabeza de tablero*/
+
+th{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: left;
+    
+}
+
+/*contenido dentro del tablero*/
+
+td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
