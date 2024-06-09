@@ -55,8 +55,42 @@ div{
     margin-bottom: 20px;
 }
 .padre article. .mueble img{
-    vertical-align: top;
-    width: 100%;
+    
+    justify-content: flex-start;
+    width: 50%;
+}
+.descripcion{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+   
+}
+.racktv{
+    color: beige;
+    background-color: brown;
+    font-family: cursive;
+    display: inline-block;
+    text-align:justify;
+}
+.vajillero{
+    color: beige;
+    background-color: brown;
+    font-family: cursive;
+    display: inline-block;
+    text-align:justify;
+}
+.biblioteca{
+    color: beige;
+    background-color: brown;
+    font-family: cursive;
+    display: inline-block;
+    text-align:justify;
+}
+.piedecama{
+    color: beige;
+    background-color: brown;
+    font-family: cursive;
+    display: inline-block;
+    text-align:justify;
 }
  
 /*el display flex me permite dar indicaciones a los "hijos"*/   
@@ -66,7 +100,7 @@ div{
   margin: 0.4rem;
 }
 div:hover{
-    border: solid white 3px;
+    border: solid white 1px;
 }
 .imgmueble:hover{
     opacity: .4;
@@ -83,7 +117,7 @@ div:hover{
 /*barra de navegacion*/
 
 .nav{
-    width: 98%;
+    width: 100%;
     margin: 0 auto;
     background-color: rgb(218, 196, 124);
     
@@ -100,8 +134,8 @@ div:hover{
 .contenedor {  
     display: grid;
     grid-template-columns: 1fr 0.8fr 1fr;
-    grid-template-rows: 0.8fr 1fr 1.9fr 0.3fr;
-    gap: 3px 3px;
+    grid-template-rows: 0.8fr 1fr 1.9fr 0.2fr;
+    gap: 3px 1px;
     grid-auto-flow: row;
     grid-template-areas:
       "header header header"
@@ -115,13 +149,14 @@ div:hover{
   .header{
   grid-area: header;
   width: 100%;
-  padding:1rem 0;
+  padding: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   }
 
   .aside1{
+    background-color: beige ;
     border-radius: 10px;
     border: solid black 4px;
     
@@ -131,6 +166,7 @@ div:hover{
     background-color: aquamarine;
   }
   .aside2{
+    background-color: beige;
     border-radius: 10px;
     border: solid black 4px;
   }
@@ -146,14 +182,35 @@ div:hover{
     margin: 20px;
     padding: 20px;
     margin: 0 auto;
+    background-color: bisque;
     border: solid rgb(10, 10, 10) 2px;
 }
 /*pie de pagina*/
 
 .footer{
+    background-image: url(../iimagenes/sofa.jpg);
     margin: 20px;
+
 }
-  
+.navfooter{
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: flex-end;
+
+}
+.parrafooter{
+    color: brown;
+    background-color: antiquewhite;
+    text-align:left;
+}
+.menufooter{
+    list-style-type: content;
+    display: flex;
+    flex-direction:row;
+    padding: 0.7rem;
+}
+
   .header { grid-area: header; }
   
   .padre { grid-area: main; }
@@ -164,70 +221,14 @@ div:hover{
   
   .footer { grid-area: footer; }
 
-  /*aptitud pc*/
-  @media screen and (max-width:1024px){
-
-  .contenedor{
-    display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.8fr 1fr 1.9fr 0.3f;
-    gap: 3px 3px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "header header header"
-      "main main aside1"
-      "main main aside2"
-      "footer footer footer";
-    
-  }
-  }
-  /*aptitud tablet*/
-
-  @media screen and (max-width:768px){
-
-
-    .contenedor{
-      display: grid;
-    grid-template-columns: 1fr  1fr;
-      grid-template-rows:  0.8fr 1fr 1.9fr 0.3f;
-      gap: 3px 3px;
-      grid-auto-flow: row;
-      grid-template-areas:
-        "header header "
-        "main aside1"
-        "main aside2"
-        "footer footer";
-      
-    }
-    }
-
-    /*aptitud smartphone*/
-
-    @media screen and (max-width:526px){
-
-
-        .contenedor{
-          display: grid;
-        grid-template-columns: 1fr ;
-          grid-template-rows:  0.8fr 1fr 1.9fr 1.9fr 0.3f;
-          gap: 3px 3px;
-          grid-auto-flow: row;
-          grid-template-areas:
-            "header"
-            "main"
-            "aside1"
-            "aside2"
-            "footer";
-          
-        }
-        }  
 /*imagen de barra navegacion*/
 
-.fotlogo img{
+
+  .fotlogo img{
     width: 80px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction:column;
+    justify-content:center;
     align-content: center;
 }
 
@@ -337,3 +338,141 @@ td{
     border-collapse: collapse;
     padding: 10px;
 }
+
+        /*aptitud smartphone*/
+
+        @media screen and (min-width:320px){
+
+            
+            
+            .contenedor{
+                grid-template-columns: 1fr;
+                grid-template-rows:  0.2fr 1.9fr 0.5fr 1fr 0.1fr;
+                gap: 3px 3px;
+                grid-auto-flow: row;
+                grid-template-areas:
+                  "header"
+                  "main"
+                  "aside1"
+                  "aside2"
+                  "footer";  
+              }
+            .header{
+                    height: auto;
+                    flex-direction: row;
+                    
+                    text-align:center;
+            }
+            .nav{
+                background-color: rgb(32, 170, 90);
+                
+            }
+            .link{
+                height: auto;
+                color: rgb(28, 40, 51);
+            }
+            .padre{
+                background-color: azure;
+                height: auto;
+
+            }
+            .padre article .p{
+                text-align: auto;
+            }
+            .menu{          /*ul*/
+                    height: auto;
+                    flex-direction:row;
+                    text-align:center;
+            }
+            .aside1{
+                background-color: green;
+                    height: auto;
+                    flex-direction: column;
+                    text-align: center;
+            }
+            .aside2{
+                background-color: blanchedalmond;
+            }
+            .footer{
+                background-image: none;
+                background-color: rgb(226, 167, 177);
+            }
+            }
+
+ /*aptitud tablet */
+
+    @media screen and (min-width:600px){
+
+        .contenedor{
+            
+        grid-template-columns: 1fr  1fr;
+          grid-template-rows:  0.3fr 1fr 0.5fr 0.1fr;
+          gap: 3px 3px;
+          grid-auto-flow: row;
+          grid-template-areas:
+            "header header "
+            "main main"
+            "aside1 aside2"
+            "footer footer";
+          
+        }
+        .header{
+            height: auto;
+            flex-direction: column;
+            text-align: center;
+    
+    }
+    .nav{
+        background-color: rgb(36, 107, 65);
+        
+    }
+    .link{
+        
+        color: rgb(28, 40, 51);
+    }
+    .padre{
+        background-color: rgb(88, 187, 187);
+        height: auto;
+
+    }
+    .padre article .p{
+        text-align: auto;
+    }
+    .menu{
+            height: auto;
+            flex-direction: column;
+            text-align: center;
+    }
+    .aside1{
+        background-color: rgb(224, 176, 18);
+            height: auto;
+            flex-direction: column;
+            text-align: center;
+    }
+    .aside2{
+        background-color: rgba(255, 235, 205, 0.705);
+    }
+    .footer{
+        background-image: none;
+        background-color: rgb(230, 71, 97);
+    }
+        }
+       
+    /*aptitud pc tamaño */
+ 
+    @media screen and (min-width:1024px){
+
+    .contenedor{
+    grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 0.2fr 0.8fr 0.8fr 0.1fr;
+      gap: 3px 3px;
+      grid-auto-flow: row;
+      grid-template-areas:
+        "header header header"
+        "main main aside1"
+        "main main aside2"
+        "footer footer footer";
+      
+    }
+    }
+ 

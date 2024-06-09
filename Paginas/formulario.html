@@ -3,34 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../Multimedia/favicon.ico">
-    <link rel="stylesheet" href="../CSS/Estilo.css">
+    <link rel="shortcut icon" href="../multimedia/favicon.ico">
+    <link rel="stylesheet" href="../css/estilo.css">
     <title>Consultas Verde Limon</title>
 </head>
 <body>
     <header id="arriba">
         <nav class="nav">
             <div class="fotlogo">
-                <img src="../Imagenes/Imagen de WhatsApp 2024-04-15 a las 01.51.33_f1e516db.jpg" alt="">
+                <img src="../imagenes/Imagen de WhatsApp 2024-04-15 a las 01.51.33_f1e516db.jpg" alt="">
                 </div>
             <ul class="menu">
-                <li class="item">
-                    <a class="link" href="../Paginas/quienessomos.html" target="_blank"><img src="../Multimedia/quiensomos.jpeg" width="10px" alt=""> ¿Quienes Somos?</a>
+<!--enlace a index-->
+                <li>
+                    <a class="link" href="../index.html" target="_blank"><img src="../imagenes/sierra.jpg" width="15px" alt="index">Home</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="../Paginas/cuadro_diferencial.html"><img src="../Multimedia/stock.jpeg" width="10px" alt=""> Stock Inmediato</a>
+                    <a class="link" href="../paginas/quienessomos.html" target="_blank"><img src="../multimedia/quiensomos.jpeg" width="10px" alt=""> ¿Quienes Somos?</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="../Paginas/formulario.html" ><img src="../Multimedia/Consultas.png" width="10px" alt="">Dejanos tu Mensaje!</a>
+                    <a class="link" href="../paginas/cuadro_diferencial.html"><img src="../multimedia/stock.jpeg" width="10px" alt=""> Stock Inmediato</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="../Paginas/comentarios.html"><img src="../Imagenes/nuestros_clientes.avif" width="10px" alt="">Nuestros Clientes</a>
+                    <a class="link" href="../paginas/formulario.html" ><img src="../multimedia/Consultas.png" width="10px" alt="">Dejanos tu Mensaje!</a>
                 </li>
                 <li class="item">
-                    <a class="link" href="http://www.instagram.com/verde.limon/" target="_blank"><img src="../Multimedia/logo ig.jpeg" width="10px" alt="redes"> Seguinos en Instagram</a>
+                    <a class="link" href="../paginas/comentarios.html"><img src="../imagenes/nuestros_clientes.avif" width="10px" alt="">Nuestros Clientes</a>
+                </li>
+                <li class="item">
+                    <a class="link" href="http://www.instagram.com/verde.limon/" target="_blank"><img src="../multimedia/logo ig.jpeg" width="10px" alt="redes"> Seguinos en Instagram</a>
                 </li>
             </ul>
         </nav>
+    </header>
         <hr>
         <h1 class="charo">Casilla de Mensajes</h1>
         <main class="consultaweb">
@@ -48,12 +53,12 @@
                 <div id="emailHelp>
                     <label for="mail">Correo Electronico:</label>
                     <input type="email" name="mail" required>
-                </>
+                </div>
                 <br>
                 <div class="mb-3>
                     <label for="Telefono">Telefono/Celular:</label>
                     <input type="text" name="number" placeholder="1234567890" >
-                </>
+                </div>
                 <br>
                 <div>
                     <label for="comment">Consulta:</label>
@@ -68,18 +73,23 @@
                         <option value="br">Brasil</option>
                         <option value="uy">Uruguay</option>
                     </select>
+                </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Check me out</label>
                 </div>
-                <button type="submit" class="btn btn-primary" value="Enviar">
-                    <input type="reset" class="btn btn-primary" value="Borrar">
+                <input type="submit" value="Enviar">
+                <input type="submit" value="Borrar">
+                    
             </form>
         </main>
-    </header>
+    
     <hr>
     <footer class="footer">
         <p><strong>verdelimondeco@gmail.com</strong></p>
     </footer>
+    
+    <!--link javascript de bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
