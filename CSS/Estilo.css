@@ -62,6 +62,7 @@ div{
 .descripcion{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     display: inline-block;
+    text-align: justify;
    
 }
 .racktv{
@@ -316,7 +317,7 @@ li{
 
 /*inicio de tablero */
 
-table{
+.tabla{
     border: 1px solid black;
     border-collapse: collapse;
 }
@@ -344,7 +345,6 @@ td{
         @media screen and (min-width:320px){
 
             
-            
             .contenedor{
                 grid-template-columns: 1fr;
                 grid-template-rows:  0.2fr 1.9fr 0.5fr 1fr 0.1fr;
@@ -359,15 +359,18 @@ td{
               }
             .header{
                     height: auto;
-                    flex-direction: row;
-                    
+                    flex-direction: column;
                     text-align:center;
             }
             .nav{
                 background-color: rgb(32, 170, 90);
                 
             }
+            .fotlogo{
+                display:none;
+            }
             .link{
+                float: inline-start;
                 height: auto;
                 color: rgb(28, 40, 51);
             }
@@ -381,7 +384,7 @@ td{
             }
             .menu{          /*ul*/
                     height: auto;
-                    flex-direction:row;
+                    flex-direction:column;
                     text-align:center;
             }
             .aside1{
@@ -394,11 +397,19 @@ td{
                 background-color: blanchedalmond;
             }
             .footer{
+                display: flex;
                 background-image: none;
                 background-color: rgb(226, 167, 177);
             }
+            .parrafooter{
+                background-color: rgb(226, 167, 177);
             }
-
+            .linkfooter:hover{ /*modifica los colores cuando el cursor pasa por encima*/
+                background-color: brown;
+                color: beige;
+                border-radius: 12px;
+            }
+        }
  /*aptitud tablet */
 
     @media screen and (min-width:600px){
@@ -406,7 +417,7 @@ td{
         .contenedor{
             
         grid-template-columns: 1fr  1fr;
-          grid-template-rows:  0.3fr 1fr 0.5fr 0.1fr;
+          grid-template-rows:  auto auto auto auto;
           gap: 3px 3px;
           grid-auto-flow: row;
           grid-template-areas:
@@ -421,43 +432,64 @@ td{
             flex-direction: column;
             text-align: center;
     
-    }
+         }
     .nav{
         background-color: rgb(36, 107, 65);
         
-    }
+        }
+    .fotlogo{
+        display: flex;
+        }
+
     .link{
-        
         color: rgb(28, 40, 51);
-    }
+        }
     .padre{
         background-color: rgb(88, 187, 187);
         height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
 
-    }
+        }
     .padre article .p{
-        text-align: auto;
-    }
+        justify-content:flex-start;
+        }
     .menu{
             height: auto;
-            flex-direction: column;
+            flex-direction: row;
             text-align: center;
-    }
+        }
     .aside1{
         background-color: rgb(224, 176, 18);
             height: auto;
             flex-direction: column;
             text-align: center;
-    }
+        }
     .aside2{
         background-color: rgba(255, 235, 205, 0.705);
-    }
+        }
     .footer{
+        height: auto;
         background-image: none;
         background-color: rgb(230, 71, 97);
-    }
         }
-       
+    .parrafooter{
+        background-color: rgb(230, 71, 97);
+        color: beige;
+        }
+    .linkfooter{
+        flex-direction:column;
+        align-items: center;
+        color: rgb(212, 225, 238);
+        }
+    .linkfooter:hover{ /*modifica los colores cuando el cursor pasa por encima*/
+        background-color: brown;
+        color: beige;
+        border-radius: 20px;
+        }
+    }
     /*aptitud pc tamaño */
  
     @media screen and (min-width:1024px){
