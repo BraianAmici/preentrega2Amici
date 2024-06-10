@@ -504,7 +504,23 @@ td{
         "main main aside1"
         "main main aside2"
         "footer footer footer";
-      
-    }
+            }    
+        .footer{
+            height: auto;
+            }
+        .parrafooter{
+            background-color: rgb(230, 71, 97);
+            color: beige;
+            }
+        .linkfooter{
+            color: rgb(212, 225, 238);
+            }
+        .linkfooter:hover{ /*modifica los colores cuando el cursor pasa por encima*/
+            background-color: brown;
+            color: beige;
+            border-radius: 20px;
+            }
+    
+
     }
  
