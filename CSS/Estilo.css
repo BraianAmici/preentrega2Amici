@@ -51,10 +51,10 @@ div{
     align-items: center;
     align-content: none;
 }
-.padre article .mueble{
+.padre .mueble{
     margin-bottom: 20px;
 }
-.padre article. .mueble img{
+.padre .mueble img{
     
     justify-content: flex-start;
     width: 50%;
@@ -377,8 +377,14 @@ td{
                 height: auto;
 
             }
-            .padre article .p{
+            .padre .p{
                 text-align: auto;
+            }
+            .desarolo{
+                height: auto;
+            }
+            .desarollo{
+                height: auto;
             }
             .menu{          /*ul*/
                     height: auto;
@@ -391,8 +397,20 @@ td{
                     flex-direction: column;
                     text-align: center;
             }
+            .fabricacion{
+                display: inline-block;
+                justify-content: center;
+                flex-direction: column;
+
+                
+            }
             .aside2{
                 background-color: blanchedalmond;
+            }
+            .fabricacion2{
+                display: inline-block;
+                justify-content: center;
+                flex-direction: column;
             }
             .footer{
                 display: flex;
@@ -465,8 +483,16 @@ td{
             flex-direction: column;
             text-align: center;
         }
+        .fabricacion{
+            display: inline-block;
+            flex-direction: column;
+        }
     .aside2{
         background-color: rgba(255, 235, 205, 0.705);
+        }
+        .fabricacion2{
+            display: inline-block;
+            flex-direction: column;
         }
     .footer{
         height: auto;
